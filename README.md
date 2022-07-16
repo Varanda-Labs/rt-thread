@@ -1,3 +1,7 @@
+# Branch overview
+The focus of this fork/branch is the Embedded Guitar Pedals Build for NXP RT1060 (MIMXRT1060-EVKB with RK043FN66HS-CTG).<br>
+For RT-Thread specifics go to master branch.
+
 # Building RT-Thread using Linux
 
 ## Preparation
@@ -31,37 +35,61 @@ sudo ln -s /usr/bin/python3 /usr/bin/python
 ```
 
 
-## Clone Varanda's rt-thread repo
+## Clone this Varanda's rt-thread repo:
 ```
-git clone -b lua-eos-01 https://github.com/Varanda-Labs/rt-thread.git
-cd rt-thread/bsp/qemu-vexpress-a9/
+git clone -b guitar-pedals https://github.com/Varanda-Labs/rt-thread.git
 ```
 
-## While Lua EOS is not in the main rt-thread repository we will redirect it.
+## While Guitar Pedals package is not in the main rt-thread repository we will redirect it.
 ```
 export RTT_PACKAGE_URL=https://github.com/Varanda-Labs/packages.git
+export RTT_PACKAGE_BRANCH=guitar-pedal
 ```
+You may consider adding these two lines into your ~/.bashrc file (on Mac: ~/.zshrc file).<br>
+Then, you do not need to do these exports everythime you launch a shell, bash or ssh session.
+
 ### Removing existing ~/.env directory
 we remove ~/.env as we are redirecting package URL:
 ```
 rm -rf ~/.env
 ```
 
+## Selecting the target
+For build/running on QEMU simulator:
+```
+cd rt-thread/bsp/qemu-vexpress-a9/
+```
+for NXP RT1060:
+```
+cd rt-thread/bsp/rt1060/
+```
+
+
 ## Config RT-Thread
 ```
 scons --menuconfig
 ```
 
-goto: RT-Thread online packages-->language packages<br>
-and select "Lua EOS is an embedded multi-task framework".<br>
+Configuration should be all good by default. But even so you need to run this command so it can fetch/build ~/.env directory.<br>
+You can just exit without changing any option.
+<br>
 
-Select "Save", confirm and select "exit a couple times.<br>
 Then:
 ```
 source ~/.env/env.sh
 pkgs --update
 scons
 ./qemu.sh
+```
+
+To run on simulator:
+```
+./qemu.sh
+```
+
+To run on RT1060:
+```
+./TBD
 ```
 
 # Building RT-Thread using Mac
