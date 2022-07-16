@@ -30,6 +30,12 @@ import shutil
 import hashlib
 import operator
 
+DEFAULT_RTT_PACKAGE_URL = 'https://github.com/RT-Thread/packages.git'
+DEFAULT_RTT_PACKAGE_BRANCH = 'master'
+# you can change the package url by defining RTT_PACKAGE_URL and RTT_PACKAGE_BRANCH, ex:
+#    export RTT_PACKAGE_URL=https://github.com/Varanda-Labs/packages.git
+#    export RTT_PACKAGE_BRANCH=guitar-pedals
+
 # make rtconfig.h from .config
 
 def is_pkg_special_config(config_str):
@@ -147,6 +153,10 @@ def touch_env():
     else:
         home_dir = os.environ['USERPROFILE']
 
+    package_url = os.getenv('RTT_PACKAGE_URL') or DEFAULT_RTT_PACKAGE_URL
+    package_branch = os.getenv('RTT_PACKAGE_BRANCH') or DEFAULT_RTT_PACKAGE_BRANCH
+    
+
     env_dir  = os.path.join(home_dir, '.env')
     if not os.path.exists(env_dir):
         os.mkdir(env_dir)
@@ -158,7 +168,8 @@ def touch_env():
 
     if not os.path.exists(os.path.join(env_dir, 'packages', 'packages')):
         try:
-            ret = os.system('git clone https://github.com/RT-Thread/packages.git %s' % os.path.join(env_dir, 'packages', 'packages'))
+            ret = os.system('git clone -b %s %s %s' % (package_branch, package_url, os.path.join(env_dir, 'packages', 'packages')))
+
             if ret != 0:
                 shutil.rmtree(os.path.join(env_dir, 'packages', 'packages'))
                 print("********************************************************************************\n"
