@@ -268,6 +268,12 @@
 
 /* LVGL: powerful and easy-to-use embedded GUI library */
 
+#define PKG_USING_LVGL
+#define PKG_LVGL_THREAD_PRIO 20
+#define PKG_LVGL_THREAD_STACK_SIZE 4096
+#define PKG_LVGL_DISP_REFR_PERIOD 5
+#define PKG_LVGL_VER_NUM 0x08030
+#define PKG_USING_LV_MUSIC_DEMO
 
 /* u8g2: a monochrome graphic library */
 
@@ -316,6 +322,12 @@
 
 #define RT_USING_UART0
 #define RT_USING_UART1
+#define BSP_USING_LVGL
+#define BSP_USING_LVGL_DEMO
+#define BSP_DRV_CLCD
+#define BSP_DRV_MOUSE
+#define BSP_LCD_WIDTH 480
+#define BSP_LCD_HEIGHT 272
 #define BSP_DRV_EMAC
 
 #endif
