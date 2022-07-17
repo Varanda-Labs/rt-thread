@@ -12,6 +12,11 @@
 void lv_user_gui_init(void)
 {
     /* display demo; you may replace with your LVGL application at here */
+#ifdef PKG_USING_GUITAR_PEDALS
+    extern void ui_init(void);
+    ui_init();
+#else
     extern void lv_demo_music(void);
     lv_demo_music();
+#endif
 }
