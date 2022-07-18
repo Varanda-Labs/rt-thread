@@ -67,6 +67,9 @@ static void BOARD_ConfigTouchIntPin(gt911_int_pin_mode_t mode);
 /*******************************************************************************
  * Variables
  ******************************************************************************/
+
+lv_indev_t * touch_indev;
+
 #ifdef DEMO_PANEL_RK043FN66HS
 static gt911_handle_t s_touchHandle;
 static const gt911_config_t s_touchConfig = {
@@ -100,7 +103,7 @@ void lv_port_indev_init(void)
     lv_indev_drv_init(&indev_drv);
     indev_drv.type    = LV_INDEV_TYPE_POINTER;
     indev_drv.read_cb = DEMO_ReadTouch;
-    lv_indev_drv_register(&indev_drv);
+    touch_indev = lv_indev_drv_register(&indev_drv);
 }
 
 #ifdef DEMO_PANEL_RK043FN66HS
