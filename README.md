@@ -113,7 +113,7 @@ cd rt-thread/bsp/qemu-vexpress-a9/
 ```
 
 
-edit file rtconfig.py
+Either export RTT_EXEC_PATH=/opt/local/bin or edit file rtconfig.py
 ```
 Change line:
   from:
