@@ -45,7 +45,13 @@ git clone -b guitar-pedals https://github.com/Varanda-Labs/rt-thread.git
 export RTT_PACKAGE_URL=https://github.com/Varanda-Labs/packages.git
 export RTT_PACKAGE_BRANCH=guitar-pedal
 ```
-You may consider adding these two lines into your ~/.bashrc file (on Mac: ~/.zshrc file).<br>
+
+For NXP boards, you need to set RTT_EXEC_PATH with the location of the NXP SDK, for example:
+```
+export RTT_EXEC_PATH=/Users/mvaranda/SDK_2_11_1_EVK-MIMXRT1060
+```
+
+You may consider adding these lines into your ~/.bashrc file (on Mac: ~/.zshrc file).<br>
 Then, you do not need to do these exports everythime you launch a shell, bash or ssh session.
 
 ### Removing existing ~/.env directory
