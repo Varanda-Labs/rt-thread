@@ -71,6 +71,7 @@ static void BOARD_ConfigTouchIntPin(gt911_int_pin_mode_t mode);
 lv_indev_t * touch_indev;
 
 #ifdef DEMO_PANEL_RK043FN66HS
+#include "touchpad.h"
 static gt911_handle_t s_touchHandle;
 static const gt911_config_t s_touchConfig = {
     .I2C_SendFunc     = BOARD_Touch_I2C_Send,
@@ -221,7 +222,7 @@ static void DEMO_InitTouch(void)
     if (status != kStatus_Success)
     {
         //PRINTF("Touch panel init failed\n");
-        assert(0);
+//        assert(0);
     }
 }
 
