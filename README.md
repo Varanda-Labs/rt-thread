@@ -94,9 +94,19 @@ To run on simulator:
 ```
 
 To run on RT1060:
-```
-./TBD
-```
+The RTT building system generates .elf file. The MCUXpressoIDE and tools expect .axf file.
+It suggests that also accepts .bin but it did not work for me by using linkServer.<br>
+
+The only way I got it working was replacing the onboard debugger firmware by Segger's.
+- The good: you can use J-Link either from MCUXpressoIDE or via J-FlashLite.
+- The bad: USB power does not work anymore. You need to power the board via power jack connector.
+
+To flash Segger firmware follow [this](https://community.nxp.com/t5/i-MX-RT-Knowledge-Base/Using-J-Link-with-MIMXRT1060-EVKB/ta-p/1452717) link.
+<br>
+BTW, I brick the board a couple times. I follow the instructions from [this](https://dzone.com/articles/regaining-debug-access-to-nxp-imx-rt1064-evk-execu) link to recover it. The USB to recover should be the one next to the Ethernet connector.<br> 
+
+
+
 
 # Building RT-Thread using Mac
 ## Preparation
