@@ -104,9 +104,8 @@ The only way I got it working was replacing the onboard debugger firmware by Seg
 To flash Segger firmware follow [this](https://community.nxp.com/t5/i-MX-RT-Knowledge-Base/Using-J-Link-with-MIMXRT1060-EVKB/ta-p/1452717) link.
 <br>
 BTW, I brick the board a couple times. I follow the instructions from [this](https://dzone.com/articles/regaining-debug-access-to-nxp-imx-rt1064-evk-execu) link to recover it. The USB to recover should be the one next to the Ethernet connector.<br> 
-
-
-
+- Using JFlashLite you select the .bin file and offset 0x60000000. But you can not debug, just run.
+- to debug: create a dummy RT1060 project in your MCUXpressoIDE; in its Debug settings point it to your rtthread.elf file. Disable auto-build. The C files in this dummy project can be anything as it does not matter. The Debugging section will automatically bring the correct source code from your real project.
 
 # Building RT-Thread using Mac
 ## Preparation
