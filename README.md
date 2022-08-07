@@ -43,7 +43,7 @@ git clone -b guitar-pedals https://github.com/Varanda-Labs/rt-thread.git
 ## While Guitar Pedals package is not in the main rt-thread repository we will redirect it.
 ```
 export RTT_PACKAGE_URL=https://github.com/Varanda-Labs/packages.git
-export RTT_PACKAGE_BRANCH=guitar-pedal
+export RTT_PACKAGE_BRANCH=guitar-pedals
 ```
 
 For NXP boards, you need to set RTT_EXEC_PATH with the location of the NXP SDK, for example:
