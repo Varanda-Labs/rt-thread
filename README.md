@@ -5,6 +5,15 @@ For RT-Thread specifics go to master branch.
 
 ![guitar-pedals.png](documentation/apps/guitar-pedals/guitar-pedals.png)
 
+# Videos
+## App Demo:
+[https://rumble.com/embed/v1cif8c/?pub=h6wnt](https://rumble.com/embed/v1cif8c/?pub=h6wnt)
+## Build Part 1:
+[https://rumble.com/v1f4cm3-build-guitar-pedals-linux-part-1.html](https://rumble.com/v1f4cm3-build-guitar-pedals-linux-part-1.html)
+## Build Part 2:
+[https://rumble.com/v1f4d6w-build-guitar-pedals-linux-part-2.html](https://rumble.com/v1f4d6w-build-guitar-pedals-linux-part-2.html)
+
+
 # Building RT-Thread using Linux
 
 ## Preparation
