@@ -1,6 +1,9 @@
 # Branch overview
 The focus of this fork/branch is the Embedded Guitar Pedals Build for NXP RT1060 (MIMXRT1060-EVKB with RK043FN66HS-CTG).<br>
 For RT-Thread specifics go to master branch.
+<br>
+
+![guitar-pedals.png](documentation/apps/guitar-pedals/guitar-pedals.png)
 
 # Building RT-Thread using Linux
 
