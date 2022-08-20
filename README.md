@@ -158,7 +158,7 @@ python -m pip install requests
 The next steps are the same than the above Linux's "Config RT-Thread"
 
 # Hardware
-Disclamer: Audio drivers were not yet integrated. The following suggested hardware were not tested yet. There is a small chance that a pre-amp between guitar and C1 would be required.
+Disclaimer: Audio drivers were not yet integrated. The following suggested hardware were not tested yet. There is a small chance that a pre-amp between guitar and C1 would be required.
 
 ## BOM:
 | ref | Description                                                   | link        |
