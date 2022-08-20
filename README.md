@@ -157,3 +157,19 @@ python -m pip install requests
 
 The next steps are the same than the above Linux's "Config RT-Thread"
 
+# Hardware
+
+## BOM:
+| ref | Description                                                   | link        |
+|-----|---------------------------------------------------------------|-------------|
+| G1  | Your Guitar | |
+| C1  | Guitar 6.35mm male to 3.5mm male (cable) | [Amazon](https://www.amazon.ca/Gold-Plated-Terminal-Housing-Cellphone-Amplifiers/dp/B08LT2R5S2/ref=pd_bxgy_sccl_2/136-4440533-4607710) |
+| J1 | ENVEL 3.5mm Jack Cable Headset Adapter Kit CTIA |[Amazon](https://www.amazon.ca/gp/product/B087CQM8KK/ref=ppx_yo_dt_b_search_asin_title)|
+| J2 | Male to Female Headphone Audio Adapter,3.5mm OMTP to CTIA Conversion Earphone Adapter |[Amazon](https://www.amazon.ca/Pomya-Headphone-Conversion-Compatible-Smartphones/dp/B0863VJWL1/ref=sr_1_1_sspa)|
+| B1 | NXP MIMXRT1060-EVKB (with LCD RK043FN66HS-CTG)|[NXP](https://www.nxp.com/design/development-boards/i-mx-evaluation-and-development-boards/i-mx-rt1060-evaluation-kit:MIMXRT1060-EVKB)|
+| C2 | 3.5mm to 2 RCA Male to Male Aux Audio Cable| [Amazon](https://www.amazon.ca/UGREEN-Connector-Speakers-Smartphone-Devices/dp/B015PZ7QO2/ref=sr_1_3)|
+| A1 | Your amplifier| |
+| P1 | Power supply | [Amazon](https://www.amazon.ca/100-240V-5-52-5mm-Transformer-Electronic-Equipment/dp/B086JRWFD9/ref=sr_1_1_sspa)|
+
+## Connections:
+![diag_01.png](documentation/apps/guitar-pedals/diag_02.png)
